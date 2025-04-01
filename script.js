@@ -3,6 +3,49 @@ let result = document.getElementById("result");
 let searchBtn = document.getElementById("search-btn");
 let url = "https://www.themealdb.com/api/json/v1/1/search.php?s=";
 
+var tl = gsap.timeline()
+
+tl.from("h2",{
+    y:-20,
+    opacity: 0,
+    duration: 0.5,
+    delay:0.5
+})
+
+tl.from("h4",{
+    y:-20,
+    opacity: 0,
+    duration: 0.3,
+    delay:0.3,
+    stagger: 0.3
+})
+
+var t2 = gsap.timeline()
+
+t2.from(".one",{
+  x:-20,
+  opacity: 0,
+  duration: 0.5,
+  delay:0.5
+})
+
+t2.from(".two",{
+  x:20,
+  opacity: 0,
+  duration: 0.5,
+  delay:0.5,
+  // stagger: 0.3
+})
+
+t2.from(".container",{
+  y:20,
+  opacity: 0,
+  duration: 0.5,
+  delay:0.5,
+  // stagger: 0.3
+})
+
+
 searchBtn.addEventListener("click", () => {
   let userInp = document.getElementById("user-inp").value;
   if (userInp.length == 0) {
