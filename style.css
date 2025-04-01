@@ -1,22 +1,87 @@
-* {
+
+  @import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+*{
+    margin:0;
     padding: 0;
-    margin: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
-  }
-  body {
-    background-color: #f4c531;
-  }
+    font-family: "gilroy-bold";
+    color: #111 ;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+    /* background-color: #F4F3E6; */
+    /* background-color: #FFF9EF; */
+    background-color: #FFFFFF;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+
+}
+
+#nav{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px;
+    position: sticky;
+}
+
+#nav h2{
+    font-size: 56px;
+    font-weight: 800;
+    color: #f4c531;
+}
+
+#part2{
+    display: flex;
+    gap: 50px;
+    font-size: 18px;
+}
+#part2 h4{
+    position: relative;
+ }
+
+#part2 h4::after{
+    content: " ";
+    margin-top: 3px;
+    position: absolute;
+    height: 2px;
+    left:0;
+    bottom: 0;
+    width: 0;
+    background-color: #111;
+    transition: width .5s
+}
+
+#part2 h4:hover::after{
+    width: 100%;
+}
+
   .container {
     background-color: #ffffff;
     font-size: 16px;
-    padding: 3em 2.8em;
+    padding: 2em 2em;
     width: 90vw;
-    max-width: 32em;
+    max-width: 30em;
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
+     left: 23%;
+     top: 90%; 
     border-radius: 0.6em;
   }
   .search-container {
@@ -118,4 +183,26 @@
     .container {
       font-size: 14px;
     }
+  }
+
+  .main{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 50px;
+  }
+
+  .head{
+    font-size: 40px;
+    width: 500px;
+  }
+
+  .head span{
+    color: #f4c531;
+  }
+
+  .desc{
+    width: 500px;
+    padding-bottom: 20px;
+    /* font-size: 12px; */
   }
